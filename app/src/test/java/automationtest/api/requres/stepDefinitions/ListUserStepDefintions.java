@@ -9,18 +9,12 @@ import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 import net.serenitybdd.screenplay.ensure.Ensure;
 import net.serenitybdd.screenplay.rest.abilities.CallAnApi;
-import net.serenitybdd.screenplay.rest.interactions.Get;
 import net.thucydides.model.util.EnvironmentVariables;
+import automationtest.api.requres.models.User;
+import automationtest.api.requres.tasks.GetUsers;
 
 import static net.serenitybdd.screenplay.rest.questions.ResponseConsequence.seeThatResponse;
 import static org.hamcrest.core.IsIterableContaining.hasItems;
-import static org.junit.Assert.assertThat;
-import static org.assertj.core.api.Assertions.assertThat;
-import static net.serenitybdd.rest.SerenityRest.restAssuredThat;
-
-
-import automationtest.api.requres.models.User;
-import automationtest.api.requres.tasks.GetUsers;
 
 public class ListUserStepDefintions {
 
