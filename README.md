@@ -9,8 +9,8 @@
 ### Prerrequisitos
 
 - Java 11 o superior
-- Gradle
-- Un IDE de tu elección (por ejemplo, IntelliJ IDEA, Eclipse)
+- Gradle 8.0.2 preferiblemente o superior
+- Un IDE de tu elección (por ejemplo, IntelliJ IDEA, Eclipse, Visual Studio Code)
 
 ### Configuración
 
@@ -22,4 +22,4 @@
 
 Para ejecutar todas las pruebas, utiliza el siguiente comando de Gradle:
 ```sh
-./gradlew clean test
+./gradlew clean test aggregate
