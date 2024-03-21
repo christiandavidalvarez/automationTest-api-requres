@@ -1,5 +1,6 @@
 package automationtest.api.requres.stepDefinitions;
 
+import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -22,11 +23,15 @@ public class ListUserStepDefintions {
     private String theRestApiBaseUrl;
     private Actor actor;
 
-    @Given("there are registered users on the platform")
-    public void there_are_registered_users_on_the_platform() {
+    @Before
+    public void prepareExecution(){
         theRestApiBaseUrl = environmentVariables.optionalProperty("restapi.baseurl")
                 .orElse("https://reqres.in/api");
         OnStage.setTheStage(new OnlineCast());
+    }
+
+    @Given("there are registered users on the platform")
+    public void there_are_registered_users_on_the_platform() {
         actor = Actor.named("Mario the user").whoCan(CallAnApi.at(theRestApiBaseUrl));
     }
 
